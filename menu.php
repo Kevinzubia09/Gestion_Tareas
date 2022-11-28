@@ -15,13 +15,13 @@
     </div>
         <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Crear Proyecto</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Perfil</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -29,13 +29,13 @@
 </ul>
 <ul class="nav flex-column">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <a class="nav-link active" aria-current="page" href="#">sistema de tareas</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Perfil</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Proyectos</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
