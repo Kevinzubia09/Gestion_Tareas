@@ -71,6 +71,7 @@
             <th>Estado</th>
             <th>Acciones</th>
 </tr>
+
         </table>
 
     </div> 
