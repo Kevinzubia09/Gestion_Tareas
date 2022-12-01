@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 1600px;
+  height: 800px;
+  background: deepskyblue;
+}
+.tituloUno {
+  position: absolute;
+  width: 1600px;
+  height: 98px;
+  left: 30px;
+  top: 29px;
+  font-family: "SF UI Display Light";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 26px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
+.pa-uno {
+  position: absolute;
+  width: 440px;
+  height: 198px;
+  left: 230px;
+  top: 75px;
+  font-family: "SF UI Display Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 15px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
+
+.pa-dos {
+  position: absolute;
+  width: 440px;
+  height: 198px;
+  left: 230px;
+  top: 129px;
+  font-family: "SF UI Display Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 15px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
+.pa-tres {
+  position: absolute;
+  width: 440px;
+  height: 198px;
+  left: 230px;
+  top: 200px;
+  font-family: "SF UI Display Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 15px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
