@@ -10,28 +10,31 @@
 </head>
 <body>
     <header>
-    <div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
+   <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Ingresa</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Registrate</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">entrar como visitante</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Conoce nuestras redes sociales</a>
+  </li>
+</ul>
 </header>
 
     <section class="seccionUno">
-        <h1 class="tituloUno">conoce acerca de nosotros, somos expertos en sistemas!!!</h1>
+        <img src="img/fonndo.png" alt="" class="fonddo">
+        <h1 class="tituloUno">Conoce acerca de nosotros, somos expertos en sistemas!!!</h1>
         <br>
         <br>
-        <p class="pa-uno">con nuestro sistema de gestion de tareas tendras todos los beneficios de un usuario premium</p>
-        <p class="pa-dos">con nuestro sistema de gestion de tareas tendras todos los beneficios de un usuario premium</p>
-          <p class="pa-tres">con nuestro sistema de gestion de tareas tendras todos los beneficios de un usuario premium</p>
+        <p class="pa-uno">Con nuestro sistema de gestion de tareas tendras todos los beneficios de un usuario premium</p>
+        <p class="pa-dos">Ahorra tiempo y dinero con nuestros planes gratuitos</p>
+          <p class="pa-tres">Conoce mas sobre los beneficios de ser miembro</p>
+          <p class="pa-cuatro">Registrate Ya!!</p>
 
     </section>
 
