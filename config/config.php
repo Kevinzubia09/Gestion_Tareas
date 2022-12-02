@@ -2,10 +2,10 @@
 $HOST     = ("localhost");
 $USER     = "root";
 $PASSWORD = "";
-$DB       = "";
+$DB       = "proyecto";
 
 $conexion = new mysqli($HOST, $USER, $PASSWORD, $DB);
 
-if ($conn->connect_errno) {
- echo "falló la base de datos" . $conn->connect_error;
+if ($conexion->connect_errno) {
+ echo "falló la base de datos" . $conexion->connect_error;
 }
