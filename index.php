@@ -25,16 +25,17 @@
   </li>
 </ul>
 </header>
-
     <section class="seccionUno">
-        <img src="img/fonndo.png" alt="" class="fonddo">
-        <h1 class="tituloUno">Conoce acerca de nosotros, somos expertos en sistemas!!!</h1>
+
+        <img src="img/img-demost.png" href="C:\xampp\htdocs\Gestion_Tareas\img/img-demost.png" alt="" class="img-demost.png">
+        
+        <h1 class="tituloUno">Conoce acerca de nosotros, somos expertos en sistemas.!!!</h1>
         <br>
         <br>
-        <p class="pa-uno">Con nuestro sistema de gestion de tareas tendras todos los beneficios de un usuario premium</p>
-        <p class="pa-dos">Ahorra tiempo y dinero con nuestros planes gratuitos</p>
-          <p class="pa-tres">Conoce mas sobre los beneficios de ser miembro</p>
-          <p class="pa-cuatro">Registrate Ya!!</p>
+        <p class="pa-uno">Con nuestro sistema de gestion de tareas tendras todos los beneficios de un usuario premium.</p>
+        <p class="pa-dos">Ahorra tiempo y dinero con nuestros planes gratuitos.</p>
+          <p class="pa-tres">Conoce mas sobre los beneficios de ser miembro.</p>
+          <p class="pa-cuatro">Registrate Ya...!!!</p>
 
     </section>
 
