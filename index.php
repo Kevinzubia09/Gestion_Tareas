@@ -27,7 +27,7 @@
 </header>
     <section class="seccionUno">
 
-        <img src="img/img-demost.png" href="C:\xampp\htdocs\Gestion_Tareas\img/img-demost.png" alt="" class="img-demost.png">
+        <img src="img/ffoondo.jpg" alt="" class="ffoondo">
         
         <h1 class="tituloUno">Conoce acerca de nosotros, somos expertos en sistemas.!!!</h1>
         <br>
