@@ -151,4 +151,5 @@ body {
 .sign-up.active {
     opacity: 0;
     visibility: hidden;
+
 }
