@@ -10,9 +10,10 @@
 </head>
 <body>
     <header>
-   <ul class="nav justify-content-center">
+      <nav>
+   <div class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Ingresa</a>
+    <a class="nav-item" class="nav-link active" aria-current="page" href="login_tareas/index.php">Ingresa</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Registrate</a>
@@ -23,7 +24,8 @@
   <li class="nav-item">
     <a class="nav-link disabled">Conoce nuestras redes sociales</a>
   </li>
-</ul>
+</div>
+</nav>
 </header>
     <section class="seccionUno">
 
