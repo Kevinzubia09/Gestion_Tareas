@@ -10,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(img/bola.gif);
+    background-image: url(../img/bola.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -151,4 +151,5 @@ body {
 .sign-up.active {
     opacity: 0;
     visibility: hidden;
+
 }
