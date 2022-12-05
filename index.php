@@ -1,7 +1,12 @@
+<?php
+require_once 'core/constants.php';
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <title>inicio</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,50 +17,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-
-    <title>gestion de tareas2</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-item" class="nav-link active" aria-current="page"
-                        href="login_tareas/index.php">Ingresa</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Registrate</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">entrar como visitante</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Conoce nuestras redes sociales</a>
-                </li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">gestion de tareas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=$routes["login"]; ?>">Ingresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=$routes["register"]; ?>">Registrate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=$routes["visitant"]; ?>">entrar como visitante</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=$routes["socialNetwork"]; ?>">Conoce nuestras redes sociales</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
-    <section class="seccionUno">
 
-        <img src="img/ffoondo.jpg" alt="" class="ffoondo">
-
-        <h1 class="tituloUno">Conoce acerca de nosotros, somos expertos en sistemas.!!!</h1>
-        <br>
-        <br>
-
-        <p class="pa-uno">Con nuestro sistema de gestion de tareas tendras todos los beneficios de un usuario premium.
-        </p>
-        <p class="pa-dos">Ahorra tiempo y dinero con nuestros planes gratuitos.</p>
-        <p class="pa-tres">Conoce mas sobre los beneficios de ser miembro.</p>
-        <p class="pa-cuatro">Registrate Ya...!!!</p>
-
-    </section>
-
-
-    <footer>
-
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
