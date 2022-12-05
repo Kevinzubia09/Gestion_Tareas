@@ -3,10 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  width: 1600px;
-  background: yellow;
+
+
+  font-family: 'Montserrat', sans-serif;
 }
+
 .img-demost.png {
   position: relative;
   width: 1600px;
@@ -25,7 +28,7 @@ body {
   height: 98px;
   left: 10px;
   top: 60px;
-  font-family: "SF UI Display Light";
+
   font-style: normal;
   font-weight: 100;
   font-size: 60px;
@@ -34,13 +37,14 @@ body {
   align-items: flex-end;
   color: #ffffff;
 }
+
 .pa-uno {
   position: absolute;
   width: 1240px;
   height: 318px;
   left: 25px;
   top: -10px;
-  font-family: "SF UI Display Light";
+
   font-style: normal;
   font-weight: 300;
   font-size: 45px;
@@ -56,7 +60,7 @@ body {
   height: 450px;
   left: 75px;
   top: 0px;
-  font-family: "SF UI Display Light";
+
   font-style: normal;
   font-weight: 300;
   font-size: 45px;
@@ -65,13 +69,14 @@ body {
   align-items: flex-end;
   color: #ffffff;
 }
+
 .pa-tres {
   position: absolute;
   width: 840px;
   height: 630px;
   left: 120px;
   top: 0px;
-  font-family: "SF UI Display Light";
+
   font-style: normal;
   font-weight: 300;
   font-size: 45px;
@@ -80,13 +85,14 @@ body {
   align-items: flex-end;
   color: #ffffff;
 }
+
 .pa-cuatro {
   position: absolute;
   width: 440px;
   height: 700px;
   left: 700px;
   top: 0px;
-  font-family: "SF UI Display Light";
+
   font-style: normal;
   font-weight: 300;
   font-size: 45px;
