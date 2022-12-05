@@ -15,7 +15,7 @@ include_once 'models/projects.php';
 </head>
 
 <body>
-    <h1 class="ejemplo">menu</h1>
+    <h1 class="interfaz">menu</h1>
 
 
 

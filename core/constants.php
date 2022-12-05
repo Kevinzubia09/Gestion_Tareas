@@ -1,7 +1,7 @@
 <?php
 
 $routes = [
- "menu"          => "app/menu.php",
+ "interfaz"      => "app/interfaz.php",
  "login"         => "app/login.php",
  "register"      => "app/register.php",
  "visitant"      => "app/visitant.php",
