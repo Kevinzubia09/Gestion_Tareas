@@ -4,9 +4,6 @@ $id     = $_GET['id'];
 $query  = "SELECT * FROM proyectos";
 $result = $mysql->query($query);
 
-$query2  = "SELECT * FROM proyecto WHERE id = $id";
-$result2 = $mysql->query($query2);
-$record  = $result2->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +23,7 @@ $record  = $result2->fetch_assoc();
     <div class="container">
         <div class="row mt-5">
             <div class="col">
-                <h1>Tareas<a href="index.php" class="btn btn-dark">Regresar</a></h1>
+                <h1>Tareas<a href="interfaz.php" class="btn btn-dark">Regresar</a></h1>
             </div>
         </div>
         <form action="../config/editar_spending.php" method="POST">
@@ -43,7 +40,7 @@ $record  = $result2->fetch_assoc();
                         <?php
 while ($row = $result->fetch_assoc()) {
  ?>
-                        <option value="<?php echo $row['id']; ?>"><?php echo $row['tarea']; ?></option>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
                         <?php } ?>
                     </select>
                 </div>

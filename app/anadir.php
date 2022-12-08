@@ -1,6 +1,7 @@
 <?php
-include_once 'config/database.php';
-
+require_once '../config/database.php';
+$query  = "SELECT * FROM proyectos";
+$result = $mysql->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,20 +24,25 @@ include_once 'config/database.php';
     <div class="container">
         <div class="row mt-5">
             <div class="col">
-                <h1>gastos<a href="./interfaz.php" class="btn btn-dark">Regresar</a></h1>
+                <h1>gastos<a href="interfaz.php" class="btn btn-dark">Regresar</a></h1>
             </div>
         </div>
-        <form action="config/guardando.php" method="POST">
+        <form action="models/anadir-spending.php" method="POST">
             <div class="row mt-5">
                 <div class="col-6">
-                    <label for="cantidad" class="form-label">Tarea</label>
-                    <input type="text" class="form-control" name="cantidad">
+                    <label for="tarea" class="form-label">Tarea</label>
+                    <input type="text" class="form-control" name="tarea">
                 </div>
                 <div class="col-6">
                     <label for="categoria" class="form-label">categoria</label>
                     <select class="form-select" name="categoria" id="categoria">
                         <option value="0" selected>selecciona tu opcion</option>
+                        <?php
 
+while ($row = $result->fetch_assoc()) {
+ ?>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+                        <?php } ?>
                     </select>
                 </div>
 

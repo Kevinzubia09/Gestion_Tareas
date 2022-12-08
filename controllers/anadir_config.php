@@ -5,6 +5,6 @@ $categoria   = $_POST['categoria'];
 $descripcion = $_POST['descripcion'];
 
 $query = "INSERT INTO proyectos (tarea, categoria, descripcion) VALUES ('$tarea', '$categoria','$descripcion')";
-$mysqls->query($query);
+$mysql->query($query);
 
 header("Location: index.php");

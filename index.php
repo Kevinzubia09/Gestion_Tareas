@@ -40,9 +40,7 @@ include_once 'core/constants.php';
                     <li class="nav-item">
                         <a class="nav-link" href="<?=$routes["interfaz"]; ?>">entrar como visitante</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?=$routes["interfaz"]; ?>">Interfaz</a>
-                    </li>
+
                 </ul>
 
             </div>

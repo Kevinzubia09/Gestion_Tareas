@@ -1,5 +1,5 @@
 <?php
-require_once 'database.php';
+require_once '../config/database.php';
 $tarea       = $_POST['tarea'];
 $categoria   = $_POST['categoria'];
 $descripcion = $_POST['descripcion'];
