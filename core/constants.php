@@ -1,9 +1,9 @@
 <?php
 
 $routes = [
- "interfaz"      => "app/interfaz.php",
- "login"         => "app/login.php",
- "register"      => "app/register.php",
- "visitant"      => "app/visitant.php",
- "socialNetwork" => "app/socialNetwork.php",
+ "interfaz" => "app/interfaz.php",
+ "login"    => "app/login.php",
+ "ingresa"  => "app/ingresa.php",
+ "visitant" => "app/visitant.php",
+ "anadir"   => "models/anadir.php",
 ];

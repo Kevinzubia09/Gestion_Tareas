@@ -1,11 +1,11 @@
 <?php
-require_once '../../config/config.php';
+include_once 'database.php';
 $email    = $_POST['email'];
 $password = $_POST['password'];
 
 $query = "SELECT * FROM usuarios WHERE correo='$email' AND contraseña='$password'";
-$conexion->query($query);
-$result = $conexion->query($query);
+$mysql->query($query);
+$result = $mysql->query($query);
 //echo $query
 $row = $result->fetch_assoc();
 
@@ -16,12 +16,12 @@ $row = $result->fetch_assoc();
 if ($row) {
  session_start();
  $_SESSION['email'] = $email;
- header("location: ../../index.php");
+ header("location: ../ingresa.php");
 
 } else {
  ?>
 <?php
-header("location: ../index.php?message=");
+header("location: ./ingresa.php?message=");
  ?>
 
 <?php

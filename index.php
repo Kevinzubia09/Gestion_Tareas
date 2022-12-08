@@ -1,5 +1,5 @@
 <?php
-require_once 'core/constants.php';
+include_once 'core/constants.php';
 ?>
 
 <!DOCTYPE html>
@@ -35,10 +35,10 @@ require_once 'core/constants.php';
                         <a class="nav-link" href="<?=$routes["login"]; ?>">Ingresa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=$routes["login"]; ?>">Registrate</a>
+                        <a class="nav-link" href="<?=$routes["ingresa"]; ?>">Registrate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=$routes["visitant"]; ?>">entrar como visitante</a>
+                        <a class="nav-link" href="<?=$routes["interfaz"]; ?>">entrar como visitante</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?=$routes["interfaz"]; ?>">Interfaz</a>

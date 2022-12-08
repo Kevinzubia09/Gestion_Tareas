@@ -1,3 +1,7 @@
+<?php
+include_once 'config/database.php';
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,17 +16,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row mt-5">
             <div class="col">
-                <h1>gastos<a href="index.php" class="btn btn-dark">Regresar</a></h1>
+                <h1>gastos<a href="./interfaz.php" class="btn btn-dark">Regresar</a></h1>
             </div>
         </div>
-        <form action="config/insert_spending.php" method="POST">
+        <form action="config/guardando.php" method="POST">
             <div class="row mt-5">
                 <div class="col-6">
                     <label for="cantidad" class="form-label">Tarea</label>
@@ -35,6 +39,7 @@
 
                     </select>
                 </div>
+
                 <div class="col-12 mb-3">
                     <label for="descripcion" class="form-label">descripcion</label>
                     <input type="text" class="form-control" name="descripcion" id="descripcion">

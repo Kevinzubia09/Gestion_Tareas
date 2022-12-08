@@ -1,6 +1,5 @@
 <?php
-include_once 'config/database.php';
-include_once 'models/projects.php';
+include_once dirname(__DIR__) . '/models/projects.php';
 
 ?>
 <!DOCTYPE html>
@@ -16,72 +15,90 @@ include_once 'models/projects.php';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/inter.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/inter.css">
     <title>interfaz</title>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="ti-menu">SISTEMA DE GESTION DE PROYECTOS BRYDAKEAL </h1>
-    </div>
-    <ul class="nav justify-content-end">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Crear Proyecto</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Proyectos finalizados</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled">Proyectos en Proceso</a>
-        </li>
-    </ul>
-
-
-    <br />
-    <div class="container-fluid">
-        <div class="row mt-5">
+        <div class="row">
             <div class="col">
-                <h1>Opción <a href="../../form-insert.php" class="btn btn-primary">añadir</a></h1>
+                <h1 class="ti-menu">SISTEMA DE GESTION DE PROYECTOS BRYDAKEAL </h1>
             </div>
         </div>
-        <div class="container">
-            <div class="row mt-0">
-                <div class="col">
-                    <h1>gastos<a href="../index.php" class="btn btn-dark">Regresar</a></h1>
-                </div>
+        <div class="row mb-5">
+            <div class="col">
+                <a class="btn btn-dark" href="../index.php">Regresar</a>
             </div>
-            <br>
-            <div class="table-responsive">
-                <table class="table table-striped table-hover">
-                    <tr>
-                        <th>Id</th>
-                        <th>tarea</th>
-                        <th>Categoria</th>
-                        <th>asignado</th>
-                        <th>Descripción</th>
-                        <th>Hora de Registro</th>
-                        <th>Status</th>
-                        <th>Fechas de vencimiento</th>
-                        <th>Tiempo de la tarea</th>
-
-                    </tr>
-                </table>
-                <div class="container-fluid">
-                    <div class="row mt-5">
-                        <div class="col">
-                            <h1>Opción <a href="../../form-insert.php" class="btn btn-primary">Eliminar</a></h1>
+            <div class="col">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Proyectos en Proceso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Proyectos finalizados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Proyectos-2022-2025</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="interfaz">Tareas</h1>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-dark float-end" href="../index.php">Crear Nuevo Proyecto</a>
+                            </div>
                         </div>
                     </div>
+
+                    <table class="table table-striped table-hover">
+                        <tr>
+                            <th>Id</th>
+                            <th>tarea</th>
+                            <th>Categoria</th>
+                            <th>asignado</th>
+                            <th>Descripción</th>
+                            <th>Hora de Registro</th>
+                            <th>Status</th>
+                            <th>Fechas de vencimiento</th>
+                            <th>Tiempo de la tarea</th>
+                        </tr>
+                        <?php foreach ($allProjects as $project) { ?>
+                        <tr>
+                            <td> <?php echo $project['id']; ?> </td>
+                            <td> <?php echo $project['tarea']; ?> </td>
+                            <td> <?php echo $project['categoria']; ?> </td>
+                            <td> <?php echo $project['asigando']; ?> </td>
+                            <td> <?php echo $project['descripcion']; ?> </td>
+                            <td> <?php echo $project['hora-de-registro']; ?> </td>
+                            <td> <?php echo $project['status']; ?> </td>
+                            <td> <?php echo $project['Fecha-de-vencimiento']; ?> </td>
+                            <td> <?php echo $project['tiempo']; ?> </td>
+                            <td>
+                                <a href="form-update.php?id=<?php echo $row['id']; ?>"
+                                    class="btn btn-warning">Editar</a>
+                                <a href="config/delete_spending.php?id=<?php echo $row['id']; ?>"
+                                    class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                        <?php } ?>
+
+                    </table>
                 </div>
             </div>
         </div>
-
-
-
+    </div>
 </body>
 
 </html>
