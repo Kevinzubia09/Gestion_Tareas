@@ -27,28 +27,28 @@ $result = $mysql->query($query);
                 <h1>gastos<a href="interfaz.php" class="btn btn-dark">Regresar</a></h1>
             </div>
         </div>
-        <form action="models/anadir-spending.php" method="POST">
+        <form action="../models/anadir-spending.php" method="POST">
             <div class="row mt-5">
                 <div class="col-6">
                     <label for="tarea" class="form-label">Tarea</label>
-                    <input type="text" class="form-control" name="tarea">
+                    <input type="text" class="form-control" name="tarea" id="tarea">
                 </div>
                 <div class="col-6">
                     <label for="categoria" class="form-label">categoria</label>
-                    <select class="form-select" name="categoria" id="categoria">
+                    <select class="form-select" name="categoria" id="">
                         <option value="0" selected>selecciona tu opcion</option>
                         <?php
 
 while ($row = $result->fetch_assoc()) {
  ?>
-                        <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
 
                 <div class="col-12 mb-3">
                     <label for="descripcion" class="form-label">descripcion</label>
-                    <input type="text" class="form-control" name="descripcion" id="descripcion">
+                    <input type="text" class="form-control" name="descripcion" id="">
                 </div>
                 <div class="col mb-12">
                     <button type="submit" class="btn btn-success">Guardar</button>

@@ -26,7 +26,7 @@ $result = $mysql->query($query);
                 <h1>Tareas<a href="interfaz.php" class="btn btn-dark">Regresar</a></h1>
             </div>
         </div>
-        <form action="../config/editar_spending.php" method="POST">
+        <form action="../models/editar_spending.php" method="POST">
             <div class="row mt-5">
                 <div class="col-6">
                     <label for="tarea" class="form-label">tarea</label>
@@ -40,7 +40,7 @@ $result = $mysql->query($query);
                         <?php
 while ($row = $result->fetch_assoc()) {
  ?>
-                        <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['tarea']; ?></option>
                         <?php } ?>
                     </select>
                 </div>

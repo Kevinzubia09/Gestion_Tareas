@@ -1,6 +1,6 @@
 <?php
 require_once '../config/database.php';
-$query  = "SELECT * FROM proyectos";
+$query  = "SELECT * FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
 $result = $mysql->query($query);
 ?>
 <!DOCTYPE html>
@@ -93,9 +93,9 @@ while ($row = $result->fetch_assoc()) {
                                 <td> <?php echo $row['tiempo']; ?> </td>
                                 <td>
                                     <a href="form-editar.php?id=<?php echo $row['id']; ?>"
-                                        class="btn btn-dark">Editar</a>
+                                        class="btn btn-dark float-end">Editar</a>
                                     <a href="../models/borrar_tarea.php?id=<?php echo $row['id']; ?>"
-                                        class="btn btn-dark">Eliminar</a>
+                                        class="btn btn-dark float-end">Eliminar</a>
                                 </td>
                             </tr>
                             <?php } ?>
