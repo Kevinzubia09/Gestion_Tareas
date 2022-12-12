@@ -1,7 +1,9 @@
 <?php
 require_once '../config/database.php';
-$query  = "SELECT * FROM proyectos";
+$query  = "SELECT g.id, g.tarea, g.asignado, g.descripcion, g.hora_de_registro, g.fecha_de_vencimiento, c.id, c.nombre FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
 $result = $mysql->query($query);
+echo $query;
+print_r($result)
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,7 +26,7 @@ $result = $mysql->query($query);
     <div class="container">
         <div class="row mt-5">
             <div class="col">
-                <h1>gastos<a href="interfaz.php" class="btn btn-dark">Regresar</a></h1>
+                <h1>añadir<a href="interfaz.php" class="btn btn-dark">Regresar</a></h1>
             </div>
         </div>
         <form action="../models/anadir-spending.php" method="POST">
@@ -46,14 +48,33 @@ while ($row = $result->fetch_assoc()) {
                     </select>
                 </div>
 
-                <div class="col-12 mb-3">
-                    <label for="descripcion" class="form-label">descripcion</label>
-                    <input type="text" class="form-control" name="descripcion" id="">
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <label for="materias" class="form-label">materia</label>
+                        <select class="form-select" name="materias" id="">
+                            <option value="0" selected>selecciona tu opcion</option>
+                            <?php
+
+while ($row = $result->fetch_assoc()) {
+ ?>
+                            <option value="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+
+                    <div class="col-12 mb-3">
+                        <label for="descripcion" class="form-label">descripcion</label>
+                        <input type="text" class="form-control" name="descripcion" id="">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="descripcion" class="form-label">asignado</label>
+                        <input type="text" class="form-control" name="asignado" id="">
+                    </div>
+                    <div class="col mb-12">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
                 </div>
-                <div class="col mb-12">
-                    <button type="submit" class="btn btn-success">Guardar</button>
-                </div>
-            </div>
         </form>
     </div>
 

@@ -1,6 +1,7 @@
 <?php
-include_once dirname(__DIR__) . '/models/projects.php';
-
+require_once '../config/database.php';
+$query  = "SELECT * FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
+$result = $mysql->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,43 +57,42 @@ include_once dirname(__DIR__) . '/models/projects.php';
                             <div class="col">
                                 <h1 class="interfaz">Tareas</h1>
                             </div>
-                            <div class="col">
-                                <a class="btn btn-dark float-end" href="anadir.php">Crear Nuevo Proyecto</a>
-                            </div>
+
                         </div>
                     </div>
 
                     <table class="table table-striped table-hover">
-                        <tr>
-                            <th>Id</th>
-                            <th>tarea</th>
-                            <th>Categoria</th>
-                            <th>asignado</th>
-                            <th>Descripción</th>
-                            <th>Hora de Registro</th>
-                            <th>Status</th>
-                            <th>Fechas de vencimiento</th>
-                            <th>Tiempo de la tarea</th>
-                        </tr>
-                        <?php foreach ($allProjects as $project) { ?>
-                        <tr>
-                            <td> <?php echo $project['id']; ?> </td>
-                            <td> <?php echo $project['tarea']; ?> </td>
-                            <td> <?php echo $project['categoria']; ?> </td>
-                            <td> <?php echo $project['asigando']; ?> </td>
-                            <td> <?php echo $project['descripcion']; ?> </td>
-                            <td> <?php echo $project['hora-de-registro']; ?> </td>
-                            <td> <?php echo $project['status']; ?> </td>
-                            <td> <?php echo $project['Fecha-de-vencimiento']; ?> </td>
-                            <td> <?php echo $project['tiempo']; ?> </td>
-                            <td>
-                                <a href="form-editar.php?id=<?php echo $row['id']; ?>" class="btn btn-dark">Editar</a>
-                                <a href="config/delete_spending.php?id=<?php echo $row['id']; ?>"
-                                    class="btn btn-dark">Eliminar</a>
-                            </td>
-                        </tr>
-                        <?php } ?>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>tarea</th>
+                                <th>Categoria</th>
+                                <th>asignado</th>
+                                <th>Descripción</th>
+                                <th>Hora de Registro</th>
+                                <th>Status</th>
+                                <th>Fechas de vencimiento</th>
+                                <th>Tiempo de la tarea</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+while ($row = $result->fetch_assoc()) {
+ ?>
+                            <tr>
+                                <td> <?php echo $row['id']; ?> </td>
+                                <td> <?php echo $row['tarea']; ?> </td>
+                                <td> <?php echo $row['categoria']; ?> </td>
+                                <td> <?php echo $row['asigando']; ?> </td>
+                                <td> <?php echo $row['descripcion']; ?> </td>
+                                <td> <?php echo $row['hora-de-registro']; ?> </td>
+                                <td> <?php echo $row['status']; ?> </td>
+                                <td> <?php echo $row['Fecha-de-vencimiento']; ?> </td>
+                                <td> <?php echo $row['tiempo']; ?> </td>
 
+                            </tr>
+                            <?php } ?>
+                        </tbody>
                     </table>
                 </div>
             </div>

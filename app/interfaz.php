@@ -1,6 +1,6 @@
 <?php
 require_once '../config/database.php';
-$query  = "SELECT * FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
+$query  = "SELECT g.id, g.tarea, g.asignado, g.descripcion, g.hora_de_registro, g.fecha_de_vencimiento  FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
 $result = $mysql->query($query);
 ?>
 <!DOCTYPE html>
@@ -82,14 +82,14 @@ $result = $mysql->query($query);
 while ($row = $result->fetch_assoc()) {
  ?>
                             <tr>
-                                <td> <?php echo $row['id']; ?> </td>
+                                <td> <?php echo $row["id"]; ?> </td>
                                 <td> <?php echo $row['tarea']; ?> </td>
                                 <td> <?php echo $row['categoria']; ?> </td>
-                                <td> <?php echo $row['asigando']; ?> </td>
+                                <td> <?php echo $row['asignado']; ?> </td>
                                 <td> <?php echo $row['descripcion']; ?> </td>
-                                <td> <?php echo $row['hora-de-registro']; ?> </td>
+                                <td> <?php echo $row['hora_de_registro']; ?> </td>
                                 <td> <?php echo $row['status']; ?> </td>
-                                <td> <?php echo $row['Fecha-de-vencimiento']; ?> </td>
+                                <td> <?php echo $row['fecha_de_vencimiento']; ?> </td>
                                 <td> <?php echo $row['tiempo']; ?> </td>
                                 <td>
                                     <a href="form-editar.php?id=<?php echo $row['id']; ?>"

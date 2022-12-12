@@ -1,9 +1,13 @@
 <?php
 require_once '../config/database.php';
 $id     = $_GET['id'];
-$query  = "SELECT * FROM proyectos";
+$query  = "SELECT * FROM materias";
 $result = $mysql->query($query);
 
+$query2 = "SELECT * FROM proyectos WHERE ID=$id";
+//echo $query2
+$result2 = $mysql->query($query2);
+$record  = $result2->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +44,7 @@ $result = $mysql->query($query);
                         <?php
 while ($row = $result->fetch_assoc()) {
  ?>
-                        <option value="<?php echo $row['id']; ?>"><?php echo $row['tarea']; ?></option>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
