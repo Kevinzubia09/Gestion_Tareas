@@ -4,7 +4,7 @@ $query  = "SELECT g.id, g.tarea, g.asignado, g.descripcion, g.hora_de_registro, 
 $result = $mysql->query($query);
 echo $query;
 print_r($result)
-?>
+; ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -42,7 +42,7 @@ print_r($result)
                         <?php
 
 while ($row = $result->fetch_assoc()) {
- ?>
+    ?>
                         <option value="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></option>
                         <?php } ?>
                     </select>
@@ -56,8 +56,8 @@ while ($row = $result->fetch_assoc()) {
                             <?php
 
 while ($row = $result->fetch_assoc()) {
- ?>
-                            <option value="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></option>
+    ?>
+                            <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
                             <?php } ?>
                         </select>
                     </div>
