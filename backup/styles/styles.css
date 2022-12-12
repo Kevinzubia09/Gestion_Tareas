@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.img-demost.png {
+  position: relative;
+  width: 1600px;
+  height: 107px;
+  left: 0px;
+  top: 0px;
+  background: #5ca1f1;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  border-radius: 2px;
+}
+
+.tituloUno {
+  position: absolute;
+  width: 1100px;
+  height: 98px;
+  left: 10px;
+  top: 60px;
+
+  font-style: normal;
+  font-weight: 100;
+  font-size: 60px;
+  line-height: 61px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
+
+.pa-uno {
+  position: absolute;
+  width: 1240px;
+  height: 318px;
+  left: 25px;
+  top: -10px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 46px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
+
+.pa-dos {
+  position: absolute;
+  width: 840px;
+  height: 450px;
+  left: 75px;
+  top: 0px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 46px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
+
+.pa-tres {
+  position: absolute;
+  width: 840px;
+  height: 630px;
+  left: 120px;
+  top: 0px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 46px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+}
+
+.pa-cuatro {
+  position: absolute;
+  width: 440px;
+  height: 700px;
+  left: 700px;
+  top: 0px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 46px;
+  display: flex;
+  align-items: flex-end;
+  color: #5ca1f1;
+}
