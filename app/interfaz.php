@@ -1,6 +1,6 @@
 <?php
 require_once '../config/database.php';
-$query  = "SELECT g.id, g.tarea, g.asignado, g.descripcion, g.hora_de_registro, g.fecha_de_vencimiento  FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
+$query  = "SELECT g.id, g.tarea, g.asignado, g.descripcion, g.hora_de_registro, g.fecha_de_vencimiento, c.nombre  FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
 $result = $mysql->query($query);
 ?>
 <!DOCTYPE html>
@@ -74,6 +74,7 @@ $result = $mysql->query($query);
                                 <th>Hora de Registro</th>
                                 <th>Status</th>
                                 <th>Fechas de vencimiento</th>
+                                <th>materia</th>
                                 <th>Tiempo de la tarea</th>
                             </tr>
                         </thead>
@@ -90,6 +91,7 @@ while ($row = $result->fetch_assoc()) {
                                 <td> <?php echo $row['hora_de_registro']; ?> </td>
                                 <td> <?php echo $row['status']; ?> </td>
                                 <td> <?php echo $row['fecha_de_vencimiento']; ?> </td>
+                                <td> <?php echo $row['nombre']; ?> </td>
                                 <td> <?php echo $row['tiempo']; ?> </td>
                                 <td>
                                     <a href="form-editar.php?id=<?php echo $row['id']; ?>"

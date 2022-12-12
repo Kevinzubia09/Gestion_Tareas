@@ -1,7 +1,8 @@
 <?php
 require_once '../config/database.php';
-$query  = "SELECT g.id, g.tarea, g.asignado, g.descripcion, g.hora_de_registro, g.fecha_de_vencimiento, c.id, c.nombre FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
+$query  = "SELECT g.id, g.tarea, g.asignado, g.descripcion, g.hora_de_registro, g.fecha_de_vencimiento, c.nombre FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
 $result = $mysql->query($query);
+
 echo $query;
 print_r($result)
 ; ?>
@@ -42,7 +43,7 @@ print_r($result)
                         <?php
 
 while ($row = $result->fetch_assoc()) {
-    ?>
+ ?>
                         <option value="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></option>
                         <?php } ?>
                     </select>
@@ -50,14 +51,14 @@ while ($row = $result->fetch_assoc()) {
 
                 <div class="row mt-5">
                     <div class="col-6">
-                        <label for="materias" class="form-label">materia</label>
-                        <select class="form-select" name="materias" id="">
+                        <label for="nombre" class="form-label">materia</label>
+                        <select class="form-select" name="nombre" id="">
                             <option value="0" selected>selecciona tu opcion</option>
                             <?php
 
 while ($row = $result->fetch_assoc()) {
-    ?>
-                            <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+ ?>
+                            <option value="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></option>
                             <?php } ?>
                         </select>
                     </div>
