@@ -1,6 +1,6 @@
 <?php
 require_once '../config/database.php';
-$query  = "SELECT g.id, g.tarea, g.asignado, g.descripcion, g.hora_de_registro, g.fecha_de_vencimiento, c.nombre  FROM proyectos g LEFT JOIN materias c ON g.categoria = c.id";
+$query  = "SELECT g.id, g.usuario, g.status, g.rol_id, g.correo FROM usuarios g";
 $result = $mysql->query($query);
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ $result = $mysql->query($query);
             <div class="col">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="tabla-usuarios.php">Tabla de Usuarios</a>
+                        <a class="nav-link active" aria-current="page" href="interfaz.php">Proyectos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Proyectos en Proceso</a>
@@ -66,15 +66,11 @@ $result = $mysql->query($query);
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>tarea</th>
-                                <th>Categoria</th>
-                                <th>asignado</th>
-                                <th>Descripción</th>
-                                <th>Hora de Registro</th>
+                                <th>Usuarios</th>
+                                <th>Rol_id</th>
+                                <th>Correo</th>
                                 <th>Status</th>
-                                <th>Fechas de vencimiento</th>
-                                <th>materia</th>
-                                <th>Tiempo de la tarea</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -83,27 +79,16 @@ while ($row = $result->fetch_assoc()) {
  ?>
                             <tr>
                                 <td> <?php echo $row["id"]; ?> </td>
-                                <td> <?php echo $row['tarea']; ?> </td>
-                                <td> <?php echo $row['categoria']; ?> </td>
-                                <td> <?php echo $row['asignado']; ?> </td>
-                                <td> <?php echo $row['descripcion']; ?> </td>
-                                <td> <?php echo $row['hora_de_registro']; ?> </td>
+                                <td> <?php echo $row['usuario']; ?> </td>
+                                <td> <?php echo $row['rol_id']; ?> </td>
+                                <td> <?php echo $row['correo']; ?> </td>
                                 <td> <?php echo $row['status']; ?> </td>
-                                <td> <?php echo $row['fecha_de_vencimiento']; ?> </td>
-                                <td> <?php echo $row['nombre']; ?> </td>
-                                <td> <?php echo $row['tiempo']; ?> </td>
+
                                 <td>
-                                    <a href="form-editar.php?id=<?php echo $row['id']; ?>"
+                                    <a href="form-editar-u.php?id=<?php echo $row['id']; ?>"
                                         class="btn btn-dark float-end">Editar</a>
                                     <a href="../models/borrar_tarea.php?id=<?php echo $row['id']; ?>"
                                         class="btn btn-dark float-end">Eliminar</a>
-
-                                    <a href="../models/status_espera.php" <?php echo $row['id']; ?>"
-                                        class="btn btn-dark float-end">En
-                                        espara</a>
-                                    <a href="#?id=<?php echo $row['id']; ?>" class="btn btn-dark float-end">Activar</a>
-
-
                                 </td>
                             </tr>
                             <?php } ?>

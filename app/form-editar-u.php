@@ -1,10 +1,10 @@
 <?php
 require_once '../config/database.php';
 $id     = $_GET['id'];
-$query  = "SELECT * FROM materias";
+$query  = "SELECT * FROM usuarios";
 $result = $mysql->query($query);
 
-$query2 = "SELECT * FROM proyectos WHERE ID=$id";
+$query2 = "SELECT * FROM usuarios WHERE ID=$id";
 //echo $query2
 $result2 = $mysql->query($query2);
 $record  = $result2->fetch_assoc();
@@ -31,21 +31,21 @@ $record  = $result2->fetch_assoc();
                 <h1>Tareas<a href="interfaz.php" class="btn btn-dark">Regresar</a></h1>
             </div>
         </div>
-        <form action="../models/editar_spending.php" method="POST">
+        <form action="../models/editar_tabla_u.php" method="POST">
             <div class="row mt-5">
                 <div class="col-6">
-                    <label for="tarea" class="form-label">tarea</label>
-                    <input type="text" class="form-control" name="tarea" id="tarea"
+                    <label for="usuario" class="form-label">usuario</label>
+                    <input type="text" class="form-control" name="usuario" id="usuario"
                         value="<?php echo $record['tarea']; ?>">
                 </div>
                 <div class="col-6">
-                    <label for="categoria" class="form-label">categoria</label>
-                    <select name="categoria" id="" class="form-select">
+                    <label for="rol_id" class="form-label">rol_id</label>
+                    <select name="rol_id" id="" class="form-select">
                         <option value="0" selected>selecciona tu opción</option>
                         <?php
 while ($row = $result->fetch_assoc()) {
  ?>
-                        <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['rol_id']; ?></option>
                         <?php } ?>
                     </select>
                 </div>

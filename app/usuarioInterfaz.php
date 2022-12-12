@@ -35,7 +35,7 @@ $result = $mysql->query($query);
             <div class="col">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="tabla-usuarios.php">Tabla de Usuarios</a>
+                        <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Proyectos en Proceso</a>
@@ -62,6 +62,7 @@ $result = $mysql->query($query);
                             </div>
                         </div>
                     </div>
+
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
@@ -95,14 +96,6 @@ while ($row = $result->fetch_assoc()) {
                                 <td>
                                     <a href="form-editar.php?id=<?php echo $row['id']; ?>"
                                         class="btn btn-dark float-end">Editar</a>
-                                    <a href="../models/borrar_tarea.php?id=<?php echo $row['id']; ?>"
-                                        class="btn btn-dark float-end">Eliminar</a>
-
-                                    <a href="../models/status_espera.php" <?php echo $row['id']; ?>"
-                                        class="btn btn-dark float-end">En
-                                        espara</a>
-                                    <a href="#?id=<?php echo $row['id']; ?>" class="btn btn-dark float-end">Activar</a>
-
 
                                 </td>
                             </tr>

@@ -1,5 +1,5 @@
 <?php
-include_once 'database.php';
+include_once '../config/database.php';
 $email    = $_POST['email'];
 $password = $_POST['password'];
 
@@ -16,15 +16,15 @@ $row = $result->fetch_assoc();
 if ($row) {
  session_start();
  $_SESSION['email'] = $email;
- header("location: ../ingresa.php");
+ header("location: ../app/interfaz.php");
 
 } else {
  ?>
 <?php
-header("location: ./ingresa.php?message=");
+header("location: ../app/interfaz.php?message=");
  ?>
 
 <?php
 }
 mysqli_free_result($result);
-mysqli_close($conexion);
+mysqli_close($mysql);
