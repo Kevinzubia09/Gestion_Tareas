@@ -10,6 +10,7 @@ $result2 = $mysql->query($query2);
 $record  = $result2->fetch_assoc();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
