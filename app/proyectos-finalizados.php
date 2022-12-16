@@ -30,7 +30,7 @@ $result = $mysql->query($query);
         </div>
         <div class="row mb-5">
             <div class="col">
-                <a class="btn btn-dark" href="../index.php">Regresar</a>
+                <a class="btn btn-dark" href="interfaz.php">Regresar</a>
             </div>
             <div class="col">
                 <ul class="nav justify-content-end">
@@ -41,7 +41,7 @@ $result = $mysql->query($query);
                         <a class="nav-link" href="proyectos-proceso.php">Proyectos en Proceso</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="proyectos-finalizados.php">Proyectos finalizados</a>
+                        <a class="nav-link" href="interfaz.php">Proyectos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled">Proyectos-2022-2023</a>
@@ -55,7 +55,7 @@ $result = $mysql->query($query);
                     <div class="container">
                         <div class="row">
                             <div class="col">
-                                <h1 class="interfaz">Tareas</h1>
+                                <h1 class="interfaz">Tareas finalizadas</h1>
                             </div>
                             <div class="col">
                                 <a class="btn btn-dark float-end" href="anadir.php">Crear Nuevo Proyecto</a>
@@ -93,7 +93,7 @@ while ($row = $result->fetch_assoc()) {
                                 <td> <?php echo $row['nombre']; ?> </td>
                                 <td> <?php echo $row['tiempo']; ?> </td>
                                 <td>
-                                    <a href="form-editar.php?id=<?php echo $row['id']; ?>"
+                                    <a href="../models/editar_tabla_finalizados.php?id=<?php echo $row['id']; ?>"
                                         class="btn btn-dark float-end">Editar</a>
                                     <a href="../models/borrar_tarea.php?id=<?php echo $row['id']; ?>"
                                         class="btn btn-dark float-end">Eliminar</a>

@@ -30,7 +30,7 @@ $result = $mysql->query($query);
         </div>
         <div class="row mb-5">
             <div class="col">
-                <a class="btn btn-dark" href="../index.php">Regresar</a>
+                <a class="btn btn-dark" href="interfaz.php">Regresar</a>
             </div>
             <div class="col">
                 <ul class="nav justify-content-end">
@@ -38,7 +38,7 @@ $result = $mysql->query($query);
                         <a class="nav-link active" aria-current="page" href="tabla-usuarios.php">Tabla de Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="proyectos-proceso.php">Proyectos en Proceso</a>
+                        <a class="nav-link" href="interfaz.php">Proyectos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="proyectos-finalizados.php">Proyectos finalizados</a>
@@ -55,7 +55,7 @@ $result = $mysql->query($query);
                     <div class="container">
                         <div class="row">
                             <div class="col">
-                                <h1 class="interfaz">Tareas</h1>
+                                <h1 class="interfaz">Tareas en proceso</h1>
                             </div>
                             <div class="col">
                                 <a class="btn btn-dark float-end" href="anadir.php">Crear Nuevo Proyecto</a>

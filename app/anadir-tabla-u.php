@@ -1,7 +1,7 @@
 <?php
 require_once '../config/database.php';
 $id     = $_GET['id'];
-$query  = "SELECT * FROM proyectos";
+$query  = "SELECT * FROM usuarios";
 $result = $mysql->query($query);
 
 echo $query;
@@ -31,30 +31,30 @@ print_r($result)
                 <h1>añadir<a href="interfaz.php" class="btn btn-dark">Regresar</a></h1>
             </div>
         </div>
-        <form action="../models/anadir-spending.php" method="POST">
+        <form action="../models/anadir_tabla_u.php" method="POST">
             <div class="row mt-5">
                 <div class="col-6">
-                    <label for="tarea" class="form-label">Tarea</label>
-                    <input type="text" class="form-control" name="tarea" id="tarea">
+                    <label for="usuario" class="form-label">usuario</label>
+                    <input type="text" class="form-control" name="usuario" id="usuario">
                 </div>
                 <div class="col-6">
-                    <label for="categoria" class="form-label">categoria</label>
-                    <select class="form-select" name="categoria" id="">
+                    <label for="rol_id" class="form-label">rol_id</label>
+                    <select class="form-select" name="rol_id" id="">
                         <option value="0" selected>selecciona tu opcion</option>
                         <?php
 while ($row = $result->fetch_assoc()) {
  ?>
-                        <option value="<?php echo $row['id']; ?>"><?php echo $row['categoria']; ?></option>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['rol_id']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="col-12 mb-3">
-                    <label for="descripcion" class="form-label">descripcion</label>
-                    <input type="text" class="form-control" name="descripcion" id="">
+                    <label for="correo" class="form-label">correo</label>
+                    <input type="text" class="form-control" name="correo" id="">
                 </div>
                 <div class="col-12 mb-3">
-                    <label for="descripcion" class="form-label">asignado</label>
-                    <input type="text" class="form-control" name="asignado" id="">
+                    <label for="status" class="form-label">status</label>
+                    <input type="text" class="form-control" name="status" id="">
                 </div>
                 <div class="col mb-12">
                     <button type="submit" class="btn btn-success">Guardar</button>

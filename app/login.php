@@ -17,7 +17,7 @@
 
 <body>
 
-    <form class="formulario" action="../models/validar.php" method="POST">
+    <form class="formulario" action="../app/interfaz.php" method="POST">
         <h2 class="create-account">Iniciar Sesion</h2>
 
         <input type="email" placeholder="Email" name="email">

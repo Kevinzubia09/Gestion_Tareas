@@ -2,8 +2,9 @@
 include_once '../config/database.php';
 $email    = $_POST['email'];
 $password = $_POST['password'];
+$status   = $_POST['status'];
 
-$query = "SELECT * FROM usuarios WHERE correo='$email' AND contraseña='$password'";
+$query = "SELECT * FROM usuarios WHERE correo='$email' AND contraseña='$password' and rol_id = 0";
 $mysql->query($query);
 $result = $mysql->query($query);
 //echo $query
@@ -19,12 +20,7 @@ if ($row) {
  header("location: ../app/interfaz.php");
 
 } else {
- ?>
-<?php
-header("location: ../app/interfaz.php?message=");
- ?>
-
-<?php
+ mysqli_free_result($result);
 }
-mysqli_free_result($result);
+
 mysqli_close($mysql);
